@@ -1,30 +1,9 @@
-body {
- background-image: url(./img/thisIsTheBcImg.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- background-attachment:local
-}
-/* .container{
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-} */
- 
-/* .center is the text at the middle */
-.center {
-  position: absolute;
-  top: 18%;
-  width: 95%;
-  text-align: center;
-  font-size: 25px;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: URW Chancery L, cursive;
-}
 
+nav ul {
+    opacity:0.8;
 
-
-  ul {
+    /* position: sticky;
+    top: 20px; */
     /*  this removes the list markers*/
     list-style-type: none;
     /*Set margin: 0; and padding: 0; to remove browser default settings*/
@@ -34,11 +13,12 @@ body {
     background-color: rgb(174, 173, 173);
   }
   
-  li {
+  nav li {
     float: left;
   }
   
-  li a {
+  nav li a {
+
     display: block;
     color: rgb(245, 238, 238);
     text-align: center;
@@ -47,26 +27,42 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 20px;
-
+  
   }
   
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+  nav li a:hover {
     background-color: rgb(197, 197, 197);
   }
+  
   .active {
     background-color: #acb9b3;
   }
-  li {
+  
+  nav li {
     border-right: 1px solid rgb(187, 187, 187);
   }
   
-  li:last-child {
+  nav li:last-child {
     border-right: none;
   }
- /* this is if i want to be fixed up */ 
-  ul {
+  
+  /* this is if i want to be fixed up */
+  nav ul {
     position: fixed;
     top: 0;
     width: 100%;
   }
+
+  footer {
+    opacity: 0.5;
+    background: rgb(174, 173, 173);
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    height: 35px;
+    font-size: 30px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding: 0.5em em;
+}
