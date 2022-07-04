@@ -1,5 +1,5 @@
 body {
- background-image: url(./img/bodyImg.png);
+ background-image: url(./img/thisIsTheBcImg.jpg);
  background-repeat: no-repeat;
  background-size: cover;
  background-attachment:fixed
@@ -10,9 +10,16 @@ body {
     background-size: cover;
 } */
 
-h1 ,h2{
-    text-align: center;
-  }
+.center {
+  position: absolute;
+  top: 18%;
+  width: 95%;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: URW Chancery L, cursive;
+}
   ul {
     /*  this removes the list markers*/
     list-style-type: none;
