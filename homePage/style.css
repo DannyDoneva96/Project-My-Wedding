@@ -1,0 +1,58 @@
+body {
+ background-image: url(./img/bodyImg.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment:fixed
+}
+/* .container{
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+} */
+
+h1 ,h2{
+    text-align: center;
+  }
+  ul {
+    /*  this removes the list markers*/
+    list-style-type: none;
+    /*Set margin: 0; and padding: 0; to remove browser default settings*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(174, 173, 173);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(245, 238, 238);
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: rgb(197, 197, 197);
+  }
+  .active {
+    background-color: #acb9b3;
+  }
+  li {
+    border-right: 1px solid rgb(187, 187, 187);
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+ /* this is if i want to be fixed up */ 
+  ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
