@@ -20,6 +20,9 @@ body {
   text-shadow: 2px 2px 4px #000000;
   font-family: URW Chancery L, cursive;
 }
+
+
+
   ul {
     /*  this removes the list markers*/
     list-style-type: none;
@@ -40,7 +43,10 @@ body {
     text-align: center;
     padding: 20px 20px;
     text-decoration: none;
-    
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+
   }
   
   /* Change the link color to #111 (black) on hover */
