@@ -1,4 +1,7 @@
-
+*{
+  margin:0;
+  padding:0;
+}
   .bcgHome{
     background-image: url("./images/thisIsTheBcImg.jpg");
      background-size: cover;
