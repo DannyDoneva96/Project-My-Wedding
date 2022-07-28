@@ -1,0 +1,97 @@
+body{
+    background-image: url("./images/thisIsTheBcImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local
+  }
+  
+  /* .container{
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+  } */
+  
+  /* .center is the text at the middle */
+  
+  
+  .center {
+    position: absolute;
+    top: 18%;
+    width: 95%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Lucida Handwriting
+  }
+  
+  
+  
+  
+.navUl {
+    opacity:0.8;
+
+    /* position: sticky;
+    top: 20px; */
+    /*  this removes the list markers*/
+    list-style-type: none;
+    /*Set margin: 0; and padding: 0; to remove browser default settings*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(174, 173, 173);
+  }
+  
+  .navUl li {
+    float: left;
+  }
+  
+  .navUl li a {
+
+    display: block;
+    color: rgb(245, 238, 238);
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+  
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+ .navUl li a:hover {
+    background-color: rgb(197, 197, 197);
+  }
+  
+  /* .active {
+    background-color: #acb9b3;
+  } */
+  
+  .navUl li {
+    border-right: 1px solid rgb(187, 187, 187);
+  }
+  
+  .navUl li:last-child {
+    border-right: none;
+  }
+  
+  /* this is if i want to be fixed up */
+  .navUl {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  footer {
+    opacity: 0.5;
+    background: rgb(174, 173, 173);
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    height: 35px;
+    font-size: 30px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding: 0.5em em;
+}
