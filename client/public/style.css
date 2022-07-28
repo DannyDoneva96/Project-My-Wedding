@@ -103,3 +103,16 @@
     color: rgb(255, 255, 255);
     padding: 0.5em em;
 }
+
+/* invitation  */
+
+.flowers{
+  padding:  70px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 500px;
+  width: 500px;
+  
+}

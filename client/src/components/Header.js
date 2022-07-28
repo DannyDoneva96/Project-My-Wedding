@@ -4,7 +4,7 @@ export const Header = () => {
         <div>
             <ul className="navUl">
                 <li>
-                    <a href="/home">Danny&amp;Kiril</a>
+                    <a href="/">Danny&amp;Kiril</a>
                 </li>
                 <li>
                     <a href="/guests">Guests</a>
