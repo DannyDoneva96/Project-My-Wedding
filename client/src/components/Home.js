@@ -3,7 +3,7 @@
 export const Home =()=>{
 
 
-    return ( <section id="home-page" className="home-bcg">
+    return (<div className="bcgHome"> <section id="home-page" className="home-bcg">
     <div className="center">
       <h1 className="aboutUs">
         Kiril &amp; Danny
@@ -14,5 +14,6 @@ export const Home =()=>{
       </h2>
     </div>
   </section>
+  </div>
   )
 }
