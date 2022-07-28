@@ -2,6 +2,7 @@
   margin:0;
   padding:0;
 }
+
   .bcgHome{
     background-image: url("./images/thisIsTheBcImg.jpg");
      background-size: cover;
@@ -20,6 +21,7 @@
   
   .center {
     position: absolute;
+    
     top: 18%;
     width: 95%;
     text-align: center;
@@ -40,8 +42,8 @@
     /*  this removes the list markers*/
     list-style-type: none;
     /*Set margin: 0; and padding: 0; to remove browser default settings*/
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     overflow: hidden;
     background-color: rgb(174, 173, 173);
   }
@@ -49,7 +51,9 @@
   .navUl li {
     float: left;
   }
-  
+  .KD {
+    font-size: 80px;
+  }
   .navUl li a {
 
     display: block;
