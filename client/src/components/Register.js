@@ -4,8 +4,9 @@ export const Register = () => {
 
     return (
         <div className="wrapperReg">
+            <div className="form-container">
             <span className="form-heading">Sign up</span>
-            <form action="">
+            <form action="" className="formReg">
                 <div className="input-group">
                     <i className="fas fa-user"></i>
                     <input type="text" placeholder="Username" required></input>
@@ -35,6 +36,7 @@ export const Register = () => {
                 </div>
 
             </form>
+            </div>
 
         </div>
     )

@@ -1,130 +1,134 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-  .bcgHome{
-    background-image: url("./images/thisIsTheBcImg.jpg");
-     background-size: cover;
-   background-repeat: no-repeat;
-   width: 100%;
-   height: 100vh;
-  }
-  /* .container{
+.bcgHome {
+  background-image: url("./images/thisIsTheBcImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+/* .container{
       min-height: 100%;
       background-position: center;
       background-size: cover;
   } */
-  
-  /* .center is the text at the middle */
-  
-  
-  .center {
-    
-    position: absolute;
-    
-    top: 18%;
-    width: 95%;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    font-family: Lucida Handwriting
-  }
-  
-  
-  
-  
+
+/* .center is the text at the middle */
+
+
+.center {
+
+  position: absolute;
+
+  top: 18%;
+  width: 95%;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: Lucida Handwriting
+}
+
+
+
+
 .navUl {
-    opacity:0.8;
+  opacity: 0.8;
 
-    /* position: sticky;
+  /* position: sticky;
     top: 20px; */
-    /*  this removes the list markers*/
-    list-style-type: none;
-    /*Set margin: 0; and padding: 0; to remove browser default settings*/
-    /* margin: 0;
+  /*  this removes the list markers*/
+  list-style-type: none;
+  /*Set margin: 0; and padding: 0; to remove browser default settings*/
+  /* margin: 0;
     padding: 0; */
-    overflow: hidden;
-    background-color: rgb(174, 173, 173);
-  }
-  
-  .navUl li {
-    float: left;
-  }
-  .KD {
-    font-size: 80px;
-  }
-  .navUl li a {
+  overflow: hidden;
+  background-color: rgb(174, 173, 173);
+}
 
-    display: block;
-    color: rgb(245, 238, 238);
-    text-align: center;
-    padding: 20px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 20px;
-  
-  }
-  
-  /* Change the link color to #111 (black) on hover */
- .navUl li a:hover {
-    background-color: rgb(197, 197, 197);
-  }
-  
-  /* .active {
+.navUl li {
+  float: left;
+}
+
+.KD {
+  font-size: 80px;
+}
+
+.navUl li a {
+
+  display: block;
+  color: rgb(245, 238, 238);
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+.navUl li a:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+/* .active {
     background-color: #acb9b3;
   } */
-  
-  .navUl li {
-    border-right: 1px solid rgb(187, 187, 187);
-  }
-  
-  .navUl li:last-child {
-    border-right: none;
-  }
-  
-  /* this is if i want to be fixed up */
-  .navUl {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
 
-  footer {
-    opacity: 0.5;
-    background: rgb(174, 173, 173);
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    height: 35px;
-    font-size: 30px;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    padding: 0.5em em;
+.navUl li {
+  border-right: 1px solid rgb(187, 187, 187);
+}
+
+.navUl li:last-child {
+  border-right: none;
+}
+
+/* this is if i want to be fixed up */
+.navUl {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+footer {
+  opacity: 0.5;
+  background: rgb(174, 173, 173);
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  height: 35px;
+  font-size: 30px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  padding: 0.5em em;
 }
 
 /* invitation  */
 
-.flowers{
-  margin-top:  70px;
+.flowers {
+  margin-top: 70px;
   position: absolute;
   right: 0;
   top: 0;
   height: 500px;
   width: 500px;
-  
+
 }
-.btmFlower{
+
+.btmFlower {
   position: absolute;
   left: 0;
   bottom: 0;
   display: block;
   height: 500px;
   width: 500px;
-  margin-bottom:15px
+  margin-bottom: 15px
 }
 
 /* Wishing book  */
@@ -138,73 +142,181 @@
   color: white;
   text-shadow: 4px 4px 6px #000000;
   font-size: 80px;
-  margin-top:100px;
-  margin-bottom:100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   text-align: center;
 }
-.story{
+
+.story {
   display: flex;
   text-align: center;
   width: auto;
   justify-content: center;
 }
-.story-1{
-  background-color:rgba(122, 118, 118, 0.534);
-  margin:10px ;
-  margin-bottom:20px;
-  width:500px;
-  padding:20px;
-  line-height:20px;
-  color: rgb(255, 255, 255); 
+
+.story-1 {
+  background-color: rgba(122, 118, 118, 0.534);
+  margin: 10px;
+  margin-bottom: 20px;
+  width: 500px;
+  padding: 20px;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
   position: relative;
 
 }
-.story-1 h3{
+
+.story-1 h3 {
   color: rgb(27, 163, 9);
-  font-size:26px;
-  margin-top:50px;
+  font-size: 26px;
+  margin-top: 50px;
 
 }
 
-.description{
+.description {
   color: white;
-  font-size:12px;
-  text-transform:uppercase;
+  font-size: 12px;
+  text-transform: uppercase;
   margin: 12px 0
 }
 
-.BcgAboutUS{
+.BcgAboutUS {
   background-image: url("./images/svadba-zhenih-nevesta.jpg");
-   background-size: cover;
- background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
- height: 100vh; 
+  height: 100vh;
 }
-.storyImg{
+
+.storyImg {
   width: 100px;
   height: 100px;
-  border-radius:50%;
+  border-radius: 50%;
   position: absolute;
   top: -50px;
   left: 50%;
   transform: translateX(-50%)
-
 }
-.storyImg img{
+
+.storyImg img {
   width: 100px;
   height: 100px;
 }
+
 /* Register  */
 
-.wrapperReg{
-   
-  font-size:  10px;
+.wrapperReg {
+
+  font-size: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 90%;
   height: 100vh;
   margin: 0 auto;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+
+.form-container {
+  width: 100%;
+  max-width: 40rem;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  padding: 10rem;
+  box-shadow: 0 1px 1.5rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  z-index: 1;
+
+
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30rem;
+  background: linear-gradient(to left, #f9f9f9, #6d6d6d);
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  z-index: -1;
+
+}
+
+.form-heading {
+  color: rgba(255, 255, 255, 0.871);
+  font-size: 2.5rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 10rem;
+
+
+}
+
+.formReg {
+  transform: translateX(10rem);
+  padding: 2rem 0;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 1.5rem 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.input-group {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-self: baseline;
+
+}
+
+.input-group input {
+  width: 100%;
+
+  position: relative;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+
+  border: none;
+  outline: none;
+  font-size: 1.8;
+  color: rgb(91, 91, 91);
+
+}
+
+.input-group > i{
+  font-size:2rem;
+  margin-right: 1rem;
+  colour: rgb(161, 161, 161);
+}
+
+.input-group .bar{
+  position: absolute;
+  left :0;
+  bottom: 0;
+  background-color:rgb(173, 172, 172);
+  width: 100%;
+  height:1px;
+
+}
+.input-group .bar::before{
+  content: " ";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width:0;
+  height:2px;
+  transition: width 650ms;
+}
+
+.input-group input:focus + .bar::before{
+width:100%;
+
+
+}
+
+.input-group button{
+  margin:3rem;
 }
