@@ -4,8 +4,8 @@ import { Header } from './components/Header'
 import { Home } from './components/Home'
 import {Footer } from './components/Footer'
 import {Invitation } from './components/Invitation'
-
-
+import { About } from './components/About'
+import {Wishes} from './components/Wishes'
 function App() {
   return (
     <div className="App">
@@ -18,6 +18,12 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/invitation" element= {<Invitation />} />
+      </Routes>
+      <Routes>
+        <Route path="/aboutus" element= {<About />} />
+      </Routes>
+      <Routes>
+        <Route path="/wishingBook" element= {<Wishes />} />
       </Routes>
       <Footer  />
       </body>

@@ -1,6 +1,7 @@
 *{
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 
   .bcgHome{
@@ -20,6 +21,7 @@
   
   
   .center {
+    
     position: absolute;
     
     top: 18%;
@@ -107,12 +109,56 @@
 /* invitation  */
 
 .flowers{
-  padding:  70px;
+  margin-top:  70px;
   position: absolute;
   right: 0;
   top: 0;
+  height: 500px;
+  width: 500px;
+  
+}
+.btmFlower{
+  position: absolute;
+  left: 0;
+  bottom: 0;
   display: block;
   height: 500px;
   width: 500px;
+  margin-bottom:15px
+}
+
+/* Wishing book  */
+
+.wrapper{
+  margin-top: 10%;
+}
+
+.wrapper h1{
+  font-family: Lucida Handwriting;
+  font-size: 52px;
+  margin-bottom:60px;
+  text-align: center;
+}
+.story{
+  display: flex;
+  text-align: center;
+  width: auto;
+  justify-content: center;
+}
+.story-1{
+  background-color:pink;
+  margin:10px ;
+  margin-bottom:50px;
+  width:500px;
+  padding:20px;
+  line-height:20px;
+  color: rgb(255, 255, 255); 
+  position: relative;
+
+}
+.story-1 h3{
+  color: rgb(5, 217, 75);
+  font-size:26px;
+  margin-top:50px;
   
 }
