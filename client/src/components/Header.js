@@ -24,6 +24,9 @@ export const Header = () => {
                 <li style={{ float: "right" }}>
                     <a href="/login">Login</a>
                 </li>
+                <li style={{ float: "right" }}>
+                    <a href="/register">Register</a>
+                </li>
             </ul>
         </div>
         </header>)
