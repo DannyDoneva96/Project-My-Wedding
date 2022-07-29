@@ -129,14 +129,17 @@
 
 /* Wishing book  */
 
-.wrapper{
-  margin-top: 10%;
-}
+/* .wrapper{
+  margin-top: 20%;
+} */
 
-.wrapper h1{
+.h1Aboutus {
   font-family: Lucida Handwriting;
-  font-size: 52px;
-  margin-bottom:60px;
+  color: white;
+  text-shadow: 4px 4px 6px #000000;
+  font-size: 80px;
+  margin-top:100px;
+  margin-bottom:100px;
   text-align: center;
 }
 .story{
@@ -146,9 +149,9 @@
   justify-content: center;
 }
 .story-1{
-  background-color:pink;
+  background-color:rgba(122, 118, 118, 0.534);
   margin:10px ;
-  margin-bottom:50px;
+  margin-bottom:20px;
   width:500px;
   padding:20px;
   line-height:20px;
@@ -157,8 +160,37 @@
 
 }
 .story-1 h3{
-  color: rgb(5, 217, 75);
+  color: rgb(27, 163, 9);
   font-size:26px;
   margin-top:50px;
-  
+
+}
+
+.description{
+  color: white;
+  font-size:12px;
+  text-transform:uppercase;
+  margin: 12px 0
+}
+
+.BcgAboutUS{
+  background-image: url("./images/svadba-zhenih-nevesta.jpg");
+   background-size: cover;
+ background-repeat: no-repeat;
+  width: 100%;
+ height: 100vh; 
+}
+.storyImg{
+  width: 100px;
+  height: 100px;
+  border-radius:50%;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%)
+
+}
+.storyImg img{
+  width: 100px;
+  height: 100px;
 }
