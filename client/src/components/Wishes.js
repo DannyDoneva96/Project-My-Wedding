@@ -7,9 +7,9 @@ export const Wishes = () => {
     return(
        <div className="bodyWish">
          <section>
-            <div className="containerWishes">
-                <div className="contentWishes">
-                    <div className="card">
+            <div className="swiper mySwiper containerWishes">
+                <div className="swiper-wrapper contentWishes">
+                    <div className="swiper-slide card">
                         <div className="card-content">
                             <div className="imageW">
                                 <img src={photo1} alt="photo1" />
@@ -34,8 +34,12 @@ export const Wishes = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-scrollbar"></div>
+      <div class="swiper-pagination"></div>
          </section>
+       
        
        </div>
     )
