@@ -7,6 +7,8 @@ import {Invitation } from './components/Invitation'
 import { About } from './components/About'
 import {Wishes} from './components/Wishes'
 import {Register} from './components/Register'
+import {ErrorPage} from './components/ErrorPage'
+import {RSVP} from './components/RSVP'
 
 function App() {
   return (
@@ -17,18 +19,15 @@ function App() {
     
       <Routes>
         <Route path="/" element= {<Home />} />
-      </Routes>
-      <Routes>
+   
         <Route path="/invitation" element= {<Invitation />} />
-      </Routes>
-      <Routes>
+   
         <Route path="/aboutus" element= {<About />} />
-      </Routes>
-      <Routes>
+        <Route path="/rsvp" element= {<RSVP />} />
+
         <Route path="/wishingBook" element= {<Wishes />} />
-      </Routes>
-      <Routes>
         <Route path="/register" element= {<Register />} />
+        <Route path="/error" element= {<ErrorPage />} />
       </Routes>
       <Footer  />
       </body>

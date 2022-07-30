@@ -2,11 +2,11 @@
 
 export const Register = () => {
 
-    return (
+    return (<div className="registerBcg">
         <div className="wrapperReg">
-            <div className="form-container">
-            <span className="form-heading">Sign up</span>
             <form action="" className="formReg">
+
+           
                 <div className="input-group">
                     <i className="fas fa-user"></i>
                     <input type="text" placeholder="Username" required></input>
@@ -29,15 +29,15 @@ export const Register = () => {
                 </div>
                 <div className="input-group">
                     <button>
-                    <i class="fa-solid fa-right-to-bracket"></i>                </button>
+                        <i className="fa-solid fa-right-to-bracket"></i>                </button>
                 </div>
                 <div className="switch-login">
-                    <a href="/login">Already have an account?<span>Login</span></a>
+                    <a href="/login">Already have an account? <br/>
+                    <span>Login</span></a>
                 </div>
 
             </form>
-            </div>
 
-        </div>
+        </div></div>
     )
 }
