@@ -404,7 +404,9 @@ margin-left: 500px;
   background: linear-gradient(to right, #d1cdc1ba, #fac892e6);
   width: 60%;
   height:60%;
-  border-style:double;}
+  border-style:double;
+  z-index: 2;
+}
  
 
 
@@ -446,5 +448,118 @@ position: relative;
   color: white;
   text-shadow: 2px 2px 4px #000000;
   font-family: Lucida Handwriting;
+  z-index: 1;
   
+}
+
+/* Comments */
+.bodyWish{
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(223, 191, 191);
+}
+section .card .imageW{
+  height:140px;
+  width:140px;
+  border-radius: 50%;
+  padding:3px;
+  background-color: rgb(202, 30, 30)
+
+}
+
+section .card .imageW img{
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff
+
+}
+
+.card{
+  position: relative;
+  background-color: white;
+  border-radius:20px ;
+  margin:20px 0;
+  width: 280px;
+}
+
+
+.card::before{
+  content: "";
+  position: absolute;
+  height:40%;
+  width: 100%;
+  background-color: rgb(179, 44, 44);
+  border-radius: 20px 20px 0 0 ;
+}
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-self:center;
+  padding:30px;
+  position: relative;
+  z-index: 100;
+}
+
+.card .media-icons{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self:center;
+}
+
+.card .media-icons i {
+ color: white;
+ opacity: 0.6;
+ margin-top:10px;
+ transition: all 0.3s ease;
+
+}
+.card .media-icons i:hover{
+  opacity: 1;
+  cursor:pointer;
+}
+.card .name-prof{
+  display: flex;
+  flex-direction: column;
+  align-self:center;
+  margin-top:10px;
+  color: rgb(0, 0, 0);
+}
+
+.name-prof .nameW{
+  font-size: 20px;
+  font-weight: 600;
+}
+.name-prof .prof{
+  font-size: 15px;
+  font-weight: 500;
+}
+.card .btnW{
+  width: 100%;
+display: flex;
+justify-content:space-around;
+margin-top:20px;
+
+}
+
+.card .btnW button{
+  background-color: rgb(212, 60, 60);
+  outline: none;
+  border: none;
+  color: white;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size:14px;
+  transition: all 0.3s ease;
+}  
+
+.btnW button:hover{
+  background-color:rgb(139, 139, 139);
+  cursor:pointer;
 }
