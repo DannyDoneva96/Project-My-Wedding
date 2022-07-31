@@ -1,3 +1,7 @@
+.swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+  transform: translateX(-55%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -451,22 +455,49 @@ position: relative;
   z-index: 1;
   
 }
+/* Book */
+
+
+
 
 /* Comments */
-.bodyWish{
-  height:100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(223, 191, 191);
+.WBcg{
+  background-image: url("./images/lilavo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
 
+
+.headingOfBookW {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  margin-top: 100px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 4px 8px #600f5c;
+  font-family: Lucida Handwriting ;
+}
+
+ .bodyWish{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+margin-top:100px;} 
+
+.bodyWish section{
+  margin: 10px;
+}
 section .card .imageW{
+  
   height:140px;
   width:140px;
   border-radius: 50%;
   padding:3px;
-  background-color: rgb(202, 30, 30)
+  background-color: rgb(88, 23, 111)
 
 }
 
@@ -475,13 +506,13 @@ section .card .imageW img{
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #fff
+  border: 3px solid rgb(248, 248, 248)
 
 }
 
 .card{
   position: relative;
-  background-color: white;
+  background-color: rgb(237, 211, 240);
   border-radius:20px ;
   margin:20px 0;
   width: 280px;
@@ -493,7 +524,7 @@ section .card .imageW img{
   position: absolute;
   height:40%;
   width: 100%;
-  background-color: rgb(179, 44, 44);
+  background-color: rgb(88, 23, 111);
   border-radius: 20px 20px 0 0 ;
 }
 .card .card-content{
@@ -541,6 +572,10 @@ section .card .imageW img{
   font-size: 15px;
   font-weight: 500;
 }
+.name-prof .something{
+  font-size: 20px;
+  font-weight: 500;
+}
 .card .btnW{
   width: 100%;
 display: flex;
@@ -550,7 +585,7 @@ margin-top:20px;
 }
 
 .card .btnW button{
-  background-color: rgb(212, 60, 60);
+  background-color: rgb(104, 46, 126);
   outline: none;
   border: none;
   color: white;
@@ -561,6 +596,6 @@ margin-top:20px;
 }  
 
 .btnW button:hover{
-  background-color:rgb(139, 139, 139);
+  background-color:rgb(165, 109, 170);
   cursor:pointer;
 }
