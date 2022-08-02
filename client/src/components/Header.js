@@ -1,31 +1,32 @@
+import {Link} from 'react-router-dom'
 export const Header = () => {
     return (
         <header>
         <div>
             <ul className="navUl">
                 <li>
-                    <a href="/">Danny&amp;Kiril</a>
+                    <Link to="/">Danny&amp;Kiril</Link>
                 </li>
                 <li>
-                    <a href="/aboutus">About US</a>
+                    <Link to="/aboutus">About US</Link>
                 </li>
                 <li>
-                    <a href="/guests">Guests</a>
+                    <Link to="/guests">Guests</Link>
                 </li>
                 <li>
-                    <a href="/invitation">Invitation</a>
+                    <Link to="/invitation">Invitation</Link>
                 </li>
                 <li>
-                    <a href="/rsvp">RSVP</a>
+                    <Link to="/rsvp">RSVP</Link>
                 </li>
                 <li>
-                    <a href="/wishingBook">Book of wishes</a>
+                    <Link to="/wishingBook">Book of wishes</Link>
                 </li>
                 <li style={{ float: "right" }}>
-                    <a href="/login">Login</a>
+                    <Link to="/login">Login</Link>
                 </li>
                 <li style={{ float: "right" }}>
-                    <a href="/register">Register</a>
+                    <Link to="/register">Register</Link>
                 </li>
             </ul>
         </div>
