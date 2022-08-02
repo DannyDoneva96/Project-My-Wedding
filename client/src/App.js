@@ -11,6 +11,7 @@ import {ErrorPage} from './components/ErrorPage'
 import {RSVP} from './components/RSVP'
 import { Wishes } from './components/Wishes'
 import { Login } from './components/Login'
+import { CreateWish} from './components/CreateWish'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Route path="/rsvp" element= {<RSVP />} />
         <Route path="/wishingBook" element= {<Wishes />} />
         <Route path="/login" element= {<Login />} />
-
+        <Route path="/create" element= {<CreateWish />} />
         <Route path="/register" element= {<Register />} />
         <Route path="/error" element= {<ErrorPage />} />
       </Routes>

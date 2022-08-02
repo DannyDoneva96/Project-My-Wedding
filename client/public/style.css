@@ -464,6 +464,10 @@ position: relative;
 
 
 /* Comments */
+.wish-button{
+  color: black;
+  font-size: 40px;
+}
 .WBcg{
   background-image: url("./images/lilavo.jpg");
   background-size: cover;
@@ -599,6 +603,23 @@ margin-top:20px;
 }  
 
 .btnW button:hover{
+  background-color:rgb(165, 109, 170);
+  cursor:pointer;
+}
+.wish-button, .WaddBtn{
+display: flex;
+justify-content:space-around;
+background-color: rgb(104, 46, 126);
+outline: none;
+border: none;
+color: white;
+padding: 8px 22px;
+border-radius: 20px;
+font-size:20px;
+transition: all 0.3s ease;
+}
+
+.wish-button:hover{
   background-color:rgb(165, 109, 170);
   cursor:pointer;
 }

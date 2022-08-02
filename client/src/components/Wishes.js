@@ -1,13 +1,16 @@
-
+import {Link } from 'react-router-dom'
 const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wishes = () => {
     return (
         <div className="WBcg">
-            <div className="imTired">
+           
+            <div className="imTired"> 
                 <h1 className="headingOfBookW" >May all your wishes come true...</h1>
             </div>
-            <div className="bodyWish">
+            <div className="bodyWish">   
+                     <button className="WaddBtn"><Link className="wish-button" to="/create">+Add</Link></button>
+
                 <section>
                     <div className="swiper mySwiper containerWishes">
                         <div className="swiper-wrapper contentWishes">
