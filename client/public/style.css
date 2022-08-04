@@ -359,7 +359,25 @@ border: none;
 } 
 
 /* login */
+.loginBcg{
+  background-image: url("./images/loginbcg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+    font-size: 10px;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+
+.formlogin {
+  transform: translateX(10rem);
+  padding: 1rem ;
+  background-color: #d37393a1;
+  border-radius: 1rem;
+  box-shadow: 0 1px 1.5rem 0 #eb5c8b
+
+}
 /* 404 */
 .errorPage img{
   
@@ -482,6 +500,12 @@ position: relative;
   align-items: center;
   justify-content: center;  
   margin-top: 100px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 4px 8px #600f5c;
+  font-family: Lucida Handwriting ;
+}
+.noComments{
   font-size: 50px;
   color: white;
   text-shadow: 2px 4px 8px #600f5c;

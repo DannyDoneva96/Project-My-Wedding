@@ -1,7 +1,18 @@
 import {Link } from 'react-router-dom'
-const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
+import {useEffect,useState} from 'react'
+import {getAll} from '../services/wishService'
+import {Wish} from './Wish'
+// const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wishes = () => {
+
+    const [comments,setComments]=useState([]);
+
+    useEffect(() => {
+         getAll()
+         .then(resul=>{setComments(resul)})
+    },[])
+
     return (
         <div className="WBcg">
            
@@ -11,7 +22,7 @@ export const Wishes = () => {
             <div className="bodyWish">   
                      <button className="WaddBtn"><Link className="wish-button" to="/create">+Add</Link></button>
 
-                <section>
+                {/* <section>
                     <div className="swiper mySwiper containerWishes">
                         <div className="swiper-wrapper contentWishes">
                             <div className="swiper-slide card">
@@ -40,9 +51,13 @@ export const Wishes = () => {
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <section>
+                </section> */}
+                {comments.length>0
+                       ?comments.map(x=><Wish comment={x}/>)
+                       : <p className="noComments" >No Wishes yet...</p>
+                }
+                   
+                {/* <section>
                     <div className="swiper mySwiper containerWishes">
                         <div className="swiper-wrapper contentWishes">
                             <div className="swiper-slide card">
@@ -103,7 +118,7 @@ export const Wishes = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </div>
         </div>
     )
