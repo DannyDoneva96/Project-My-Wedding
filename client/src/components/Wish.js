@@ -1,7 +1,11 @@
+import {useState} from 'react'
+import {ModalEditWish} from './ModalEditWish';
 
-const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
+// const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wish = ({comment}) => {
+
+     const [show,setShow] =useState(false)
 
     return (<section>
         <div className="swiper mySwiper containerWishes">
@@ -24,8 +28,9 @@ export const Wish = ({comment}) => {
                         </div>
 
                         <div className="btnW">
-                            <button className="btnWishEdit">Edit</button>
+                            <button onClick={()=>setShow(true)}className="btnWishEdit">Edit</button>
                             <button className="btnWishDel">Delete</button>
+                            <ModalEditWish onClose = {()=>setShow(false)} show={show}/>
 
                         </div>
                     </div>

@@ -1,12 +1,14 @@
-import {Link } from 'react-router-dom'
 import {useEffect,useState} from 'react'
 import {getAll} from '../services/wishService'
 import {Wish} from './Wish'
+import {ModalMakeWish} from './ModalMakeWish'
+
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wishes = () => {
 
     const [comments,setComments]=useState([]);
+    const [show,setShow] =useState(false)
 
     useEffect(() => {
          getAll()
@@ -20,7 +22,8 @@ export const Wishes = () => {
                 <h1 className="headingOfBookW" >May all your wishes come true...</h1>
             </div>
             <div className="bodyWish">   
-                     <button className="WaddBtn"><Link className="wish-button" to="/create">+Add</Link></button>
+                     <button onClick={()=>setShow(true)} className="WaddBtn wish-button">+Add</button>
+                     <ModalMakeWish onClose = {()=>setShow(false)} show={show}/>
 
                 {/* <section>
                     <div className="swiper mySwiper containerWishes">
@@ -34,18 +37,15 @@ export const Wishes = () => {
                                         <i className="fab fa-facebook"></i>
                                         <i className="fab fa-twitter"></i>
                                         <i className="fab fa-github"></i>
-
                                     </div>
                                     <div className="name-prof">
                                         <span className="nameW">Elizabeth Miler</span>
                                         <span className="prof">Sister </span>
                                         <p className="something">I wish you both endless love</p>
                                     </div>
-
                                     <div className="btnW">
                                         <button className="btnWishEdit">Edit</button>
                                         <button className="btnWishDel">Delete</button>
-
                                     </div>
                                 </div>
                             </div>
@@ -69,19 +69,15 @@ export const Wishes = () => {
                                         <i className="fab fa-facebook"></i>
                                         <i className="fab fa-twitter"></i>
                                         <i className="fab fa-github"></i>
-
                                     </div>
                                     <div className="name-prof">
                                         <span className="nameW">Someone</span>
                                         <span className="prof">Sister </span>
                                         <p className="something">I wish you both endless love</p>
-
                                     </div>
-
                                     <div className="btnW">
                                         <button className="btnWishEdit">Edit</button>
                                         <button className="btnWishDel">Delete</button>
-
                                     </div>
                                 </div>
                             </div>
@@ -100,19 +96,15 @@ export const Wishes = () => {
                                         <i className="fab fa-facebook"></i>
                                         <i className="fab fa-twitter"></i>
                                         <i className="fab fa-github"></i>
-
                                     </div>
                                     <div className="name-prof">
                                         <span className="nameW">Someone</span>
                                         <span className="prof">Sister </span>
                                         <p className="something">I wishhhhhhhhhhhhhhhhhhh</p>
-
                                     </div>
-
                                     <div className="btnW">
                                         <button className="btnWishEdit">Edit</button>
                                         <button className="btnWishDel">Delete</button>
-
                                     </div>
                                 </div>
                             </div>
@@ -121,5 +113,5 @@ export const Wishes = () => {
                 </section> */}
             </div>
         </div>
-    )
+    ) 
 }
