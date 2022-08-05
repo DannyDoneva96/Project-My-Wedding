@@ -1,4 +1,5 @@
 import {Route,Routes} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
   import { useState, useEffect } from 'react'
   import { db } from './firebase'
   import { collection, getDocs, addDoc,updateDoc ,doc,deleteDoc} from 'firebase/firestore'
@@ -37,10 +38,15 @@ function App() {
   
       }, []);
 
-  const addGuestHandler = async (rsvp) => {
-     console.log(rsvp);
-    await addDoc(rsvpRef, rsvp)
+      let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `guest`; 
+    navigate(path);
+  }
 
+  const addGuestHandler = async (rsvp) => {
+    await addDoc(rsvpRef, rsvp)
+    routeChange()
   }
 
   return (
@@ -60,7 +66,7 @@ function App() {
         <Route path="/login" element= {<Login />} />
         <Route path="/create" element= {<CreateWish />} />
         <Route path="/register" element= {<Register />} />
-        <Route path="/guest" element= {<Guest guest={guest} />} />
+        <Route path="/guest" element= {<Guest guest={guest }  />} />
 
         <Route path="/error" element= {<ErrorPage />} />
       </Routes>
