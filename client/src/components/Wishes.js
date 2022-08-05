@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react'
 import {Wish} from './Wish'
 import {ModalMakeWish} from './ModalMakeWish'
 import {db} from '../firebase'
-import {collection, getDocs} from 'firebase/firestore'
+import {collection, getDocs,addDoc} from 'firebase/firestore'
 
 
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
@@ -25,12 +25,9 @@ const wishRef = collection(db,"wishes");
          
     },[]);
 
-    const addWishHandler = (wishData) => {
+    const addWishHandler = async (wishData) => {
         
-        setWishes(state => [
-        ...state, 
-        wishData,
-        ])
+        await addDoc(wishRef,wishData)
     }
 
     return (

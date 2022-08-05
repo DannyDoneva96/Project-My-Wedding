@@ -564,7 +564,7 @@ section .card .imageW img{
   align-self:center;
   padding:30px;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 
 .card .media-icons{
@@ -661,6 +661,7 @@ transition: all 0.3s ease;
   display:flex;
   align-items: center;
   justify-content: center;
+  z-index:2
 }
 
 .modal-content{

@@ -14,6 +14,7 @@ export const ModalMakeWish = (props) => {
     
     const onSubmit = (e) =>{
         props.addWishHandler(wishes)
+        props.onClose()
     }
 
     
