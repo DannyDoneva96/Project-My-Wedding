@@ -1,20 +1,64 @@
+import {useState} from 'react'
 
 
-export const ModalEditWish = (props) => {
+export const ModalEditWish = ({id,updateWish,show,onClose}) => {
 
-    if (!props.show){
+    
+
+    const [editWishes,setEditWishes]= useState({
+        name:'',
+        imageUrl: '',
+        related: '',
+        message: '',
+    });
+
+if (!show){
         return null;
+    }
+    const onSubmit = (e) =>{
+        updateWish(id,editWishes)
+        onClose()
+    }
+    const onChange=(e)=>{
+        setEditWishes(state=>({
+            ...state,
+            [e.target.name]:e.target.value
+        }))
     }
 
     return (
-        <div className="modal" onClick={props.onClose}>
+        <div className="modal" onClick={onClose}>
             <div className="modal-content" onClick={e=>e.stopPropagation()}>
                 <div className="modal-header">
                     <h4 className="modal-title">eddit Your Wish here! </h4>
                 </div>
+                <div className="">
+                        <i className="fas fa-user"></i>
+                        <input type="text" placeholder="Name" name="name"  onChange={onChange} value={editWishes.name}></input>
+                        <span className="bar"></span>
+
+                    </div>
+                    <div className="">
+                        <i className="fas fa-user"></i>
+                        <input type="text" placeholder="imageUrl" name="imageUrl" onChange={onChange} value={editWishes.imageUrl}></input>
+                        <span className="bar"></span>
+
+                    </div>
+                    <div className="">
+                        <i className="fas fa-user"></i>
+                        <input type="text" placeholder="related" name="related" onChange={onChange} value={editWishes.related}></input>
+                        <span className="bar"></span>
+
+                    </div>
+                    <div className="">
+                        <i className="fas fa-user"></i>
+                        <input type="text" placeholder="message" name="message" onChange={onChange} value={editWishes.message}></input>
+                        <span className="bar"></span>
+
+                    </div>
                 <div className="modal-body">This is body</div>
-                <div className="modal-footer"><button type="button" className="modal-button">Send</button>
-                    <button onClick={props.onClose} type="button" className="modal-button">close</button>
+                <div className="modal-footer"><button type="submit" onClick={onSubmit} className="modal-button">Send</button>
+                    <button  type="button" className="modal-button">close</button>
                 </div>
             </div>
         </div>
