@@ -1,4 +1,28 @@
+import {useState} from 'react'
+
+
+
 export const ModalMakeWish = (props) => {
+
+    const [wishes,setWishes]=useState({
+        name:'',
+        imageUrl: '',
+        related: '',
+        message: '',
+    });
+
+    
+    const onSubmit = (e) =>{
+        props.addWishHandler(wishes)
+    }
+
+    
+    const onChange=(e)=>{
+        setWishes(state=>({
+            ...state,
+            [e.target.name]:e.target.value
+        }))
+    }
 
     if (!props.show) {
         return null;
@@ -6,35 +30,36 @@ export const ModalMakeWish = (props) => {
     return (
         <div className="modal" onClick={props.onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
+                
                 <div className="modal-header">
                     <h4 className="modal-title"> Write Your Wish here! </h4>
                     <div className="">
                         <i className="fas fa-user"></i>
-                        <input type="text" placeholder="Name" required></input>
+                        <input type="text" placeholder="Name" name="name"  onChange={onChange} value={wishes.name}></input>
                         <span className="bar"></span>
 
                     </div>
                     <div className="">
                         <i className="fas fa-user"></i>
-                        <input type="text" placeholder="imgUrl" required></input>
+                        <input type="text" placeholder="imageUrl" name="imageUrl" onChange={onChange} value={wishes.imageUrl}></input>
                         <span className="bar"></span>
 
                     </div>
                     <div className="">
                         <i className="fas fa-user"></i>
-                        <input type="text" placeholder="related" required></input>
+                        <input type="text" placeholder="related" name="related" onChange={onChange} value={wishes.related}></input>
                         <span className="bar"></span>
 
                     </div>
                     <div className="">
                         <i className="fas fa-user"></i>
-                        <input type="text" placeholder="message" required></input>
+                        <input type="text" placeholder="message" name="message" onChange={onChange} value={wishes.message}></input>
                         <span className="bar"></span>
 
                     </div>
                 </div>
                 <div className="modal-body">This is body</div>
-                <div className="modal-footer"><button type="button" className="modal-button">Send</button>
+                <div className="modal-footer"><button  type="submit" onClick={onSubmit} className="modal-button">Send</button>
                     <button onClick={props.onClose} type="button" className="modal-button">close</button>
                 </div>
             </div>

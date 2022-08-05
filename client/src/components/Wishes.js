@@ -1,19 +1,37 @@
-import {useEffect,useState} from 'react'
-import {getAll} from '../services/wishService'
+import {useState,useEffect} from 'react'
 import {Wish} from './Wish'
 import {ModalMakeWish} from './ModalMakeWish'
+import {db} from '../firebase'
+import {collection, getDocs} from 'firebase/firestore'
+
 
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wishes = () => {
 
-    const [comments,setComments]=useState([]);
+    const [wishes,setWishes]=useState([]);
     const [show,setShow] =useState(false)
-
+const wishRef = collection(db,"wishes");
+    //  
     useEffect(() => {
+        
+         const getAll = async () =>{
+            const data = await getDocs(wishRef)
+          setWishes(data.docs.map((doc) => ({...doc.data(),id:doc.id})));   
+          console.log(data)
+        }
+
          getAll()
-         .then(resul=>{setComments(resul)})
-    },[])
+         
+    },[]);
+
+    const addWishHandler = (wishData) => {
+        
+        setWishes(state => [
+        ...state, 
+        wishData,
+        ])
+    }
 
     return (
         <div className="WBcg">
@@ -23,7 +41,7 @@ export const Wishes = () => {
             </div>
             <div className="bodyWish">   
                      <button onClick={()=>setShow(true)} className="WaddBtn wish-button">+Add</button>
-                     <ModalMakeWish onClose = {()=>setShow(false)} show={show}/>
+                     <ModalMakeWish onClose = {()=>setShow(false)} show={show}  addWishHandler={addWishHandler}/>
 
                 {/* <section>
                     <div className="swiper mySwiper containerWishes">
@@ -52,9 +70,9 @@ export const Wishes = () => {
                         </div>
                     </div>
                 </section> */}
-                {comments.length>0
-                       ?comments.map(x=><Wish comment={x}/>)
-                       : <p className="noComments" >No Wishes yet...</p>
+                {wishes.length>0 && !undefined
+                       ?wishes.map(x=><Wish key={x.name} wishes={x}/>)
+                       : <p className="nowishes" >No Wishes yet...</p>
                 }
                    
                 {/* <section>

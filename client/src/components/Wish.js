@@ -3,7 +3,7 @@ import {ModalEditWish} from './ModalEditWish';
 
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
-export const Wish = ({comment}) => {
+export const Wish = ({wishes}) => {
 
      const [show,setShow] =useState(false)
 
@@ -13,7 +13,7 @@ export const Wish = ({comment}) => {
                 <div className="swiper-slide card">
                     <div className="card-content">
                         <div className="imageW">
-                            <img src={comment.imageUrl} alt="photo1" />
+                            <img src={wishes.imageUrl} alt="photo1" />
                         </div>
                         <div className="media-icons">
                             <i className="fab fa-facebook"></i>
@@ -22,9 +22,9 @@ export const Wish = ({comment}) => {
 
                         </div>
                         <div className="name-prof">
-                            <span className="nameW">{comment.name}</span>
-                            <span className="prof">{comment.related} </span>
-                            <p className="something">{comment.msg}</p>
+                            <span className="nameW">{wishes.name}</span>
+                            <span className="prof">{wishes.related} </span>
+                            <p className="something">{wishes.message}</p>
                         </div>
 
                         <div className="btnW">
