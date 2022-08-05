@@ -657,7 +657,7 @@ transition: all 0.3s ease;
   top:0;
   right:0;
   bottom: 0;
-  background-color:rgb(0, 0, 0,0.5);
+  background-color:rgba(58, 58, 58, 0.5);
   display:flex;
   align-items: center;
   justify-content: center;
@@ -666,20 +666,55 @@ transition: all 0.3s ease;
 
 .modal-content{
   width:500px;
-  background-color:white
+  background-color:rgb(237, 211, 240);
+  font-size: 20px;
+  border-radius: 25px;
+
+
 
 }
 
 .modal-header , .modal-footer{
   padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-self:center;
+  margin-top:10px;
+  color: rgb(0, 0, 0);
 }
 
 .modal-title{
-  margin: 0;
-}
-.modal-body{
-  padding:10px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-self:center;
+  margin-top:5px;
+  margin-bottom:10px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 4px 8px #600f5c;
 
+  font-size:30px;
+
+}
+
+
+.modal button{
+justify-content:space-around;
+background-color: rgb(104, 46, 126);
+outline: none;
+border: none;
+color: white;
+padding: 8px 22px;
+border-radius: 50px;
+font-size:20px;
+transition: all 0.3s ease;
+}
+
+.modal button:hover{
+  background-color:rgb(165, 109, 170);
+  cursor:pointer;
+}
+
+.modal i{
+  color: rgb(104, 46, 126);
+  font-size: 20px;
 }

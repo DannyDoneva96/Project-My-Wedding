@@ -36,32 +36,35 @@ export const ModalMakeWish = (props) => {
                     <h4 className="modal-title"> Write Your Wish here! </h4>
                     <div className="">
                         <i className="fas fa-user"></i>
+                        <label for="name">Name</label>
                         <input type="text" placeholder="Name" name="name"  onChange={onChange} value={wishes.name}></input>
                         <span className="bar"></span>
 
                     </div>
                     <div className="">
                         <i className="fas fa-user"></i>
+                        <label for="imageUrl">Photo</label>
                         <input type="text" placeholder="imageUrl" name="imageUrl" onChange={onChange} value={wishes.imageUrl}></input>
                         <span className="bar"></span>
 
                     </div>
                     <div className="">
                         <i className="fas fa-user"></i>
+                        <label for="related">Related</label>
                         <input type="text" placeholder="related" name="related" onChange={onChange} value={wishes.related}></input>
                         <span className="bar"></span>
 
                     </div>
                     <div className="">
                         <i className="fas fa-user"></i>
+                        <label for="message">Message</label>
                         <input type="text" placeholder="message" name="message" onChange={onChange} value={wishes.message}></input>
                         <span className="bar"></span>
 
                     </div>
                 </div>
-                <div className="modal-body">This is body</div>
-                <div className="modal-footer"><button  type="submit" onClick={onSubmit} className="modal-button">Send</button>
-                    <button onClick={props.onClose} type="button" className="modal-button">close</button>
+                <div className="modal-footer"><button  type="submit" onClick={onSubmit} className="modal-button">SEND</button>
+                    <button onClick={props.onClose} type="button" className="modal-button">CLOSE</button>
                 </div>
             </div>
         </div>

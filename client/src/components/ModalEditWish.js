@@ -30,7 +30,7 @@ if (!show){
         <div className="modal" onClick={onClose}>
             <div className="modal-content" onClick={e=>e.stopPropagation()}>
                 <div className="modal-header">
-                    <h4 className="modal-title">eddit Your Wish here! </h4>
+                    <h4 className="modal-title">Eddit Your Wish here! </h4>
                 </div>
                 <div className="">
                         <i className="fas fa-user"></i>
@@ -56,9 +56,9 @@ if (!show){
                         <span className="bar"></span>
 
                     </div>
-                <div className="modal-body">This is body</div>
-                <div className="modal-footer"><button type="submit" onClick={onSubmit} className="modal-button">Send</button>
-                    <button  type="button" className="modal-button">close</button>
+                
+                <div className="modal-footer"><button type="submit" onClick={onSubmit} className="modal-button">SEND</button>
+                    <button  type="button" className="modal-button" onClick={onClose}>CLOSE</button>
                 </div>
             </div>
         </div>
