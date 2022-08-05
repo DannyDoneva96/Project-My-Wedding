@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import { Wish } from './Wish'
 import { ModalMakeWish } from './ModalMakeWish'
 import { db } from '../firebase'
-import { collection, getDocs, addDoc,updateDoc ,doc} from 'firebase/firestore'
+import { collection, getDocs, addDoc,updateDoc ,doc,deleteDoc} from 'firebase/firestore'
 
 // Import Swiper React components
 
@@ -41,6 +41,10 @@ export const Wishes = () => {
         await addDoc(wishRef, wishData)
         
     }
+      const deleteWish = async(id) =>{
+        const wishDoc = doc(db, "wishes",id); 
+         await deleteDoc(wishDoc)
+      }
 
     const updateWish= async (id, wishData) => {
         const wishDoc = doc(db, "wishes",id);
@@ -87,9 +91,9 @@ export const Wishes = () => {
                     </div>
                 </section> */}
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={4}
                     spaceBetween={30}
-                    slidesPerGroup={3}
+                    slidesPerGroup={4}
                     loop={true}
                     loopFillGroupWithBlank={true}
                     pagination={{
@@ -101,7 +105,7 @@ export const Wishes = () => {
                     >
 
                     {wishes.length > 0 && !undefined
-                        ? wishes.map(x => <SwiperSlide><Wish key={x.name} id= {x.id} wishes={x} updateWish={updateWish}  /> </SwiperSlide>)
+                        ? wishes.map(x => <SwiperSlide><Wish key={x.name} id= {x.id} wishes={x} deleteWish={deleteWish} updateWish={updateWish}  /> </SwiperSlide>)
                         : <p className="nowishes" >No Wishes yet...</p>
                     }
                 </Swiper>

@@ -3,7 +3,7 @@ import {ModalEditWish} from './ModalEditWish';
 
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
-export const Wish = ({wishes,updateWish,id}) => {
+export const Wish = ({wishes,updateWish,id,deleteWish}) => {
 
      const [show,setShow] =useState(false)
 
@@ -29,7 +29,7 @@ export const Wish = ({wishes,updateWish,id}) => {
 
                         <div className="btnW">
                             <button onClick={()=>setShow(true)} className="btnWishEdit">Edit</button>
-                            <button className="btnWishDel">Delete</button>
+                            <button onClick={()=>{deleteWish(id)}}className="btnWishDel">Delete</button>
                             <ModalEditWish onClose = {()=>setShow(false)} show={show} id={id} updateWish={updateWish} />
 
                         </div>
