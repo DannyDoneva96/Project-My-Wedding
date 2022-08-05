@@ -1,44 +1,56 @@
-import {useState,useEffect} from 'react'
-import {Wish} from './Wish'
-import {ModalMakeWish} from './ModalMakeWish'
-import {db} from '../firebase'
-import {collection, getDocs,addDoc} from 'firebase/firestore'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination,  } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { useState, useEffect } from 'react'
+import { Wish } from './Wish'
+import { ModalMakeWish } from './ModalMakeWish'
+import { db } from '../firebase'
+import { collection, getDocs, addDoc } from 'firebase/firestore'
+
+// Import Swiper React components
+
+
+// Import Swiper styles
+
 
 
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wishes = () => {
 
-    const [wishes,setWishes]=useState([]);
-    const [show,setShow] =useState(false)
-const wishRef = collection(db,"wishes");
+    const [wishes, setWishes] = useState([]);
+    const [show, setShow] = useState(false)
+    const wishRef = collection(db, "wishes");
     //  
     useEffect(() => {
-        
-         const getAll = async () =>{
+
+        const getAll = async () => {
             const data = await getDocs(wishRef)
-          setWishes(data.docs.map((doc) => ({...doc.data(),id:doc.id})));   
-          console.log(data)
+            setWishes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            console.log(data)
         }
 
-         getAll()
-         
-    },[]);
+        getAll()
+
+    }, []);
 
     const addWishHandler = async (wishData) => {
-        
-        await addDoc(wishRef,wishData)
+
+        await addDoc(wishRef, wishData)
     }
 
     return (
+
         <div className="WBcg">
-           
-            <div className="imTired"> 
+
+            <div className="imTired">
                 <h1 className="headingOfBookW" >May all your wishes come true...</h1>
             </div>
-            <div className="bodyWish">   
-                     <button onClick={()=>setShow(true)} className="WaddBtn wish-button">+Add</button>
-                     <ModalMakeWish onClose = {()=>setShow(false)} show={show}  addWishHandler={addWishHandler}/>
+            <div className="bodyWish">
+                <button onClick={() => setShow(true)} className="WaddBtn wish-button">+Add</button>
+                <ModalMakeWish onClose={() => setShow(false)} show={show} addWishHandler={addWishHandler} />
 
                 {/* <section>
                     <div className="swiper mySwiper containerWishes">
@@ -67,11 +79,25 @@ const wishRef = collection(db,"wishes");
                         </div>
                     </div>
                 </section> */}
-                {wishes.length>0 && !undefined
-                       ?wishes.map(x=><Wish key={x.name} wishes={x}/>)
-                       : <p className="nowishes" >No Wishes yet...</p>
-                }
-                   
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={30}
+                    slidesPerGroup={3}
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                    >
+
+                    {wishes.length > 0 && !undefined
+                        ? wishes.map(x => <SwiperSlide><Wish key={x.name} wishes={x} /> </SwiperSlide>)
+                        : <p className="nowishes" >No Wishes yet...</p>
+                    }
+                </Swiper>
                 {/* <section>
                     <div className="swiper mySwiper containerWishes">
                         <div className="swiper-wrapper contentWishes">
@@ -128,5 +154,5 @@ const wishRef = collection(db,"wishes");
                 </section> */}
             </div>
         </div>
-    ) 
+    )
 }
