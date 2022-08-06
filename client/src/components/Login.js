@@ -1,25 +1,40 @@
-
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
+import {signInWithEmailAndPassword} from 'firebase/auth';
+import { auth } from '../firebase'
 import { Link } from 'react-router-dom'
 
 export const Login = () => {
 
-  
-    // const onSubmit = (e) => {
-    //     e.preventDefault();
+    let navigate = useNavigate(); 
 
-    //     const {
-    //         email,
-    //         password,
-    //     } = Object.fromEntries(new FormData(e.target));
+    const onSubmit = (e) => {
+        e.preventDefault();
 
+        const {
+            email,
+            password,
+        } = Object.fromEntries(new FormData(e.target));
+
+        const login = async () => {
+            try {
+                const user = await signInWithEmailAndPassword(auth,email,password);
+                console.log(user)
+                navigate('/');
+
+            }catch (err) {
+                console.log(err.message)
+                navigate('/');
+
+            }
+        }
+     
+        login();
       
-    // }
+    }
     return (<div className="loginBcg">
         <div className="wrapperReg">
-            <form  onSubmit={''}  className="formlogin">
+            <form  onSubmit={onSubmit}  className="formlogin">
 
                 <h3 className="loginh3 switch-login">LOGIN</h3>
                 <div className="input-group">

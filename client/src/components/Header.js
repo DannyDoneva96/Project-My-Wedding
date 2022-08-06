@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
 
-export const Header = () => {
+
+export const Header = (props) => {
 
 
-
-
+   
     return (
 
 
         <header>
             <div>
                 <ul className="navUl">
-
+                     
                     <li>
                         <Link to="/">Danny&amp;Kiril</Link>
                     </li>
@@ -31,17 +31,19 @@ export const Header = () => {
                     <li>
                         <Link to="/wishingBook">Book of wishes</Link>
                     </li>
-                    <li style={{ float: "right" }}>
+                    
+                     <li style={{ float: "right" }}>
                         <Link to="/logout">Logout</Link>
                     </li>
-
-                    <li style={{ float: "right" }}>
+                  
+                    <><li style={{ float: "right" }}>
                         <Link to="/login">Login</Link>
                     </li>
                     <li style={{ float: "right" }}>
                         <Link to="/register">Register</Link>
                     </li>
-
+                    </>
+                        
 
 
 
