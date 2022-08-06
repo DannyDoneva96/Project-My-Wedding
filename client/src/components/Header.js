@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import { UserAuth } from '../context/AuthContext';
 
 
 export const Header = (props) => {
 
+    const { user } = UserAuth();
 
    
     return (
@@ -31,18 +33,18 @@ export const Header = (props) => {
                     <li>
                         <Link to="/wishingBook">Book of wishes</Link>
                     </li>
-                    
-                     <li style={{ float: "right" }}>
+                    {user
+                    ? <li style={{ float: "right" }}>
                         <Link to="/logout">Logout</Link>
                     </li>
                   
-                    <><li style={{ float: "right" }}>
+                   : <><li style={{ float: "right" }}>
                         <Link to="/login">Login</Link>
                     </li>
                     <li style={{ float: "right" }}>
                         <Link to="/register">Register</Link>
                     </li>
-                    </>
+                    </>}
                         
 
 

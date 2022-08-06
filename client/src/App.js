@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import { db } from './firebase'
 import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore'
-import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './firebase'
-
+import { AuthContextProvider } from './context/AuthContext';
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { Footer } from './components/Footer'
@@ -53,23 +52,13 @@ function App() {
     routeChange()
   }
 
-  const register = async (userData) => {
-
-    try {
-
-      if (!userData.password == userData.confirmPassword) {
-        alert("Passwords dont match")
-        return;
-      }
-      const user = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
-    } catch (err) { console.log(err.message) }
-
-  }
+  
 
 
   return (
     <div className="App">
       <body>
+      <AuthContextProvider>
         <Header />
 
 
@@ -84,12 +73,13 @@ function App() {
           <Route path="/wishingBook" element={<Wishes />} />
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={<CreateWish />} />
-          <Route path="/register" element={<Register register={register} />} />
+          <Route path="/register" element={<Register  />} />
           <Route path="/guest" element={<Guest guest={guest} />} />
 
           <Route path="/error" element={<ErrorPage />} />
         </Routes>
         <Footer />
+        </AuthContextProvider>
       </body>
     </div>
   );

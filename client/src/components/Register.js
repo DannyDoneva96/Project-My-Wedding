@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import {useState } from 'react'
- 
+import { useNavigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
+
 
 
 export const Register = (props) => {
@@ -11,15 +13,31 @@ export const Register = (props) => {
         password: '',
         confirmPassword: '',
     });
+    const [error, setError] = useState('')
+  const { createUser } = UserAuth();
+  const navigate = useNavigate()
+  
     const onChange=(e)=>{
         setRegisterUser(state=>({
             ...state,
             [e.target.name]:e.target.value
         }))
     }
-    const onSubmit = (e) =>{
+    const onSubmit = async (e) =>{
         e.preventDefault();
-        props.register(registerUser)
+        setError('');
+        try {
+
+            if (!registerUser.password === registerUser.confirmPassword) {
+                alert("Passwords dont match")
+                return;
+              }  
+          await createUser(registerUser.email, registerUser.password);
+          navigate('/home')
+        } catch (e) {
+          setError(e.message);
+          console.log(error);
+        }
     }
     
     
