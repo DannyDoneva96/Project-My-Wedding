@@ -720,7 +720,7 @@ transition: all 0.3s ease;
 }
 
 /* Guest lists */
-.Guests{
+.Guests{ 
   background-image: url("./images/rsvp.webp");
   background-size:contain;
   background-position: right;
@@ -729,7 +729,10 @@ transition: all 0.3s ease;
   width: 100%;
   height: 100vh;
 }
-.Guests h1{
+.wrapperGuest{
+margin-bottom: 100px;
+}
+.Guests p{
   font-size: 60px;
   margin-left: 150px;
   margin-top:100px;

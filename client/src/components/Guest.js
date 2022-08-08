@@ -4,7 +4,8 @@ export const Guest = (props) => {
 
     return (<div className = 'Guests'>
 
-             <h1> Guest List</h1>
+            <div className = 'wrapGuest'>!</div>
+            <p > Guest List</p>
 
         <ol className="gradient-list">
             {props.guest.map(guest => <GuestLi key={guest.name} guest={guest}></GuestLi>)}
