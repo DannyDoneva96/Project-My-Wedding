@@ -115,6 +115,11 @@ TODO: That must happen only if is owner
 
 ![Book of Wishes Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/edit%20comment.jpg)
 
+Every Wish card has two emoticons in the right top corner which shows likes and dislikes
+with  click on the emoticon you can add like or dislike 
+
+![Book of Wishes Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/Untitled.png)
+
 ###RSVP Page
 Here we have form with input fields ,select options field and textarea.
 On Submit this information is saved in our database and is shown in our Guest page.
