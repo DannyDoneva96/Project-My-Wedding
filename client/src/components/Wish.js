@@ -1,11 +1,15 @@
-import {useState} from 'react'
-import {ModalEditWish} from './ModalEditWish';
+import { render } from '@testing-library/react';
+import { useState } from 'react'
+import { ModalEditWish } from './ModalEditWish';
 
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
-export const Wish = ({wishes,updateWish,id,deleteWish}) => {
+export const Wish = ({ wishes, updateWish, deleteWish }) => {
 
-     const [show,setShow] =useState(false)
+    const [show, setShow] = useState(false)
+
+    // fetchData() is called whenever data is updated.
+
 
     return (<section>
         <div className="swiper mySwiper containerWishes">
@@ -16,9 +20,9 @@ export const Wish = ({wishes,updateWish,id,deleteWish}) => {
                             <img src={wishes.imageUrl} alt="photo1" />
                         </div>
                         <div className="media-icons">
-                            <i className="fab fa-facebook"></i>
-                            <i className="fab fa-twitter"></i>
-                            <i className="fab fa-github"></i>
+
+                            <i  class="fa-solid fa-heart">Likes : {wishes.likes} </i>
+                            <i  class="fa-solid fa-heart-crack">Dislike: {wishes.dislikes}</i>
 
                         </div>
                         <div className="name-prof">
@@ -28,9 +32,9 @@ export const Wish = ({wishes,updateWish,id,deleteWish}) => {
                         </div>
 
                         <div className="btnW">
-                            <button onClick={()=>setShow(true)} className="btnWishEdit">Edit</button>
-                            <button onClick={()=>{deleteWish(id)}}className="btnWishDel">Delete</button>
-                            <ModalEditWish onClose = {()=>setShow(false)} show={show} id={id} updateWish={updateWish} />
+                            <button onClick={() => setShow(true)} className="btnWishEdit">Edit</button>
+                            <button onClick={() => { deleteWish(wishes.id) }} className="btnWishDel">Delete</button>
+                            <ModalEditWish onClose={() => setShow(false)} show={show} id={wishes.id} updateWish={updateWish} />
 
                         </div>
                     </div>

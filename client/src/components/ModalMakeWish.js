@@ -9,6 +9,8 @@ export const ModalMakeWish = (props) => {
         imageUrl: '',
         related: '',
         message: '',
+        likes:0,
+        dislikes:0,
     });
 
     

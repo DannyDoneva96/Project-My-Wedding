@@ -8,6 +8,8 @@ import { Wish } from './Wish'
 import { ModalMakeWish } from './ModalMakeWish'
 import { db } from '../firebase'
 import { collection, getDocs, addDoc,updateDoc ,doc,deleteDoc} from 'firebase/firestore'
+import {  useNavigate } from 'react-router-dom';
+
 
 // Import Swiper React components
 
@@ -23,7 +25,8 @@ export const Wishes = () => {
     const [wishes, setWishes] = useState([]);
     const [show, setShow] = useState(false)
     const wishRef = collection(db, "wishes");
-    
+    const navigate = useNavigate();
+
     useEffect(() => {
 
         const getAll = async () => {
@@ -50,6 +53,7 @@ export const Wishes = () => {
         const newData = wishData
         await updateDoc(wishDoc, newData)
     }
+   
 
     return (
 
@@ -104,7 +108,7 @@ export const Wishes = () => {
                     >
 
                     {wishes.length > 0 && !undefined
-                        ? wishes.map(x => <SwiperSlide><Wish key={x.name} id= {x.id} wishes={x} deleteWish={deleteWish} updateWish={updateWish}  /> </SwiperSlide>)
+                        ? wishes.map(x => <SwiperSlide><Wish key={x.name} wishes={x} deleteWish={deleteWish} updateWish={updateWish} /> </SwiperSlide>)
                         : <p className="nowishes" >No Wishes yet...</p>
                     }
                 </Swiper>
