@@ -57,7 +57,6 @@ function App() {
 
   return (
     <div className="App">
-      <body>
       <AuthContextProvider>
         <Header />
 
@@ -80,7 +79,6 @@ function App() {
         </Routes>
         <Footer />
         </AuthContextProvider>
-      </body>
     </div>
   );
 }

@@ -38,7 +38,7 @@ export const RSVP = (props) => {
                     <div className="text-center">
                         <form >
                             <div className="rsvpinputs">
-                                <label for="name">Your Name</label>
+                                <label htmlFor="name">Your Name</label>
                                 <input
                                     onChange={onChange}
                                     name="name"
@@ -47,7 +47,7 @@ export const RSVP = (props) => {
 
                                 />
 
-                                <label for="name">Email</label>
+                                <label htmlFor="name">Email</label>
                                 <input
                                     onChange={onChange}
                                     name="email"
@@ -57,7 +57,7 @@ export const RSVP = (props) => {
                                 />
 
                                 <div className="rsvpSelect">
-                                    <label for="numOfGuest">Number Of Guests</label>
+                                    <label htmlFor="numOfGuest">Number Of Guests</label>
                                     <select
                                         name="numOfGuest"
                                         className=""
@@ -73,7 +73,7 @@ export const RSVP = (props) => {
 
                                     </select>
 
-                                    <label for="event">I'm Attending</label>
+                                    <label htmlFor="event">I'm Attending</label>
                                     <select
                                         onChange={onChange}
                                         name="event"
@@ -88,7 +88,7 @@ export const RSVP = (props) => {
                             </div>
                             <div className="msgRsvp">
 
-                                <label for="message"> Message</label>
+                                <label htmlFor="message"> Message</label>
                                 <textarea
                                     name="message"
                                     onChange={onChange}

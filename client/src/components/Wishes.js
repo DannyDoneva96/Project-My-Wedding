@@ -108,7 +108,7 @@ export const Wishes = () => {
                     >
 
                     {wishes.length > 0 && !undefined
-                        ? wishes.map(x => <SwiperSlide><Wish key={x.name} wishes={x} deleteWish={deleteWish} updateWish={updateWish} /> </SwiperSlide>)
+                        ? wishes.map(x => <SwiperSlide> <Wish key={x.name} wishes={x} deleteWish={deleteWish} updateWish={updateWish} /> </SwiperSlide>)
                         : <p className="nowishes" >No Wishes yet...</p>
                     }
                 </Swiper>
