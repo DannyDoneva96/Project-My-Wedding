@@ -8,7 +8,7 @@ export const Guest = (props) => {
             <p > Guest List</p>
 
         <ol className="gradient-list">
-            {props.guest.map(guest => <GuestLi key={guest.name} guest={guest}></GuestLi>)}
+            {props.guest.map(guest => <GuestLi key={guest.id} guest={guest}></GuestLi>)}
 
         </ol>
 

@@ -20,9 +20,12 @@ export const Header = (props) => {
                     <li>
                         <Link to="/aboutus">About US</Link>
                     </li>
-                    <li>
+                    {user
+                   ? <li>
                         <Link to="/guest">Guests</Link>
                     </li>
+
+                    :null}
                     <li>
                         <Link to="/invitation">Invitation</Link>
                     </li>
