@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react'
 import { db } from '../firebase'
 import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore'
+import { UserAuth } from '../context/AuthContext';
 
 
 export const RSVP = (props) => {
+
+    const { user } = UserAuth();
+
+    const [isVisible, setIsVisible] = useState(false);
 
     const [rsvp, setRsvp] = useState({
 
@@ -26,6 +31,12 @@ export const RSVP = (props) => {
         props.addGuestHandler(rsvp)
     }
 
+    useEffect(() => {
+        if (user) {
+            setIsVisible(true);
+        }
+        
+    }, []);
     return (
         <div className="rsvp" id="rsvp">
             <div className="jop">
@@ -98,6 +109,7 @@ export const RSVP = (props) => {
                             </div>
                             <div>
                                 <button
+                                 style={ {visibility: isVisible ? 'visible' : 'hidden'} }
                                     onClick={onRsvp}
                                     className="btnRsvp"
                                     type="submit"

@@ -56,7 +56,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-
+          <Route path="*" element={<ErrorPage />} />
           <Route path="/invitation" element={<Invitation />} />
           <Route path="/logout" element={<Logout />} />
 
@@ -69,7 +69,6 @@ function App() {
           <Route path="/guest" element={<Guest guest={guest} />} />
           <Route path="/guests/:id" element={<DetailsOfGuest guest={guest} />} />
 
-          <Route path="/error" element={<ErrorPage />} />
         </Routes>
         <Footer />
         </AuthContextProvider>

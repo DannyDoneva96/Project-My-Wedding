@@ -1,34 +1,44 @@
-import { useState ,useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { ModalEditWish } from './ModalEditWish';
+import { UserAuth } from '../context/AuthContext';
+
 import { db } from '../firebase'
-import { collection, getDocs, addDoc,updateDoc ,doc,deleteDoc} from 'firebase/firestore'
+import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore'
 
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wish = ({ wishes, updateWish, deleteWish }) => {
+    const { user } = UserAuth();
 
+    const [isVisible, setIsVisible] = useState(false);
     const [show, setShow] = useState(false)
-    const [likes,setLikes] = useState({likes:wishes.likes})
+    const [likes, setLikes] = useState({ likes: wishes.likes })
     const wishRef = collection(db, "wish");
+    
+    useEffect(() => {
+        if (user) {
+            setIsVisible(true);
+        }
+    }, []);
 
-    const   likesAction = async (id, likesData) => {
-        const wishDoc = doc(db, "wishes",id);
-        const newData = {likes: likesData +1}
+    const likesAction = async (id, likesData) => {
+        const wishDoc = doc(db, "wishes", id);
+        const newData = { likes: likesData + 1 }
         await updateDoc(wishDoc, newData)
         setLikes(newData)
     }
     useEffect(() => {
 
         const getLikes = async () => {
-          const data = await getDocs(wishRef)
-          const likesData =data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-          setLikes( likesData.likes)
+            const data = await getDocs(wishRef)
+            const likesData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+            setLikes(likesData.likes)
         }
-    
+
         getLikes()
-    
-      }, []);
-    
+
+    }, []);
+
 
     return (<section>
         <div className="swiper mySwiper containerWishes">
@@ -40,8 +50,8 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
                         </div>
                         <div className="media-icons">
 
-                            <i onClick={() =>{likesAction(wishes.id,wishes.likes)}} className="fa-solid fa-heart">Likes : {wishes.likes}</i>
-                            <i  className="fa-solid fa-heart-crack">Dislike: {wishes.dislikes}</i>
+                            <i onClick={() => { likesAction(wishes.id, wishes.likes) }} className="fa-solid fa-heart">Likes : {wishes.likes}</i>
+                            <i className="fa-solid fa-heart-crack">Dislike: {wishes.dislikes}</i>
 
                         </div>
                         <div className="name-prof">
@@ -51,8 +61,8 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
                         </div>
 
                         <div className="btnW">
-                            <button onClick={() => setShow(true)} className="btnWishEdit">Edit</button>
-                            <button onClick={() => { deleteWish(wishes.id) }} className="btnWishDel">Delete</button>
+                            <button style={{ visibility: isVisible ? 'visible' : 'hidden' }} onClick={() => setShow(true)} className="btnWishEdit">Edit</button>
+                            <button style={{ visibility: isVisible ? 'visible' : 'hidden' }} onClick={() => { deleteWish(wishes.id) }} className="btnWishDel">Delete</button>
                             <ModalEditWish onClose={() => setShow(false)} show={show} id={wishes.id} updateWish={updateWish} />
 
                         </div>

@@ -25,7 +25,7 @@ export const Login = () => {
             navigate('/')
         } catch (e) {
             setError(e.message)
-            alert(error)
+            navigate('/error');
         }
 
 

@@ -21,7 +21,7 @@ export const Logout =()=>{
        logout()
        navigate('/');
     }catch(err) {
-        navigate('/');
+        navigate('/error');
        }
     
       }, []);

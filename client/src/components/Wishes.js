@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination,  } from 'swiper';
+import { UserAuth } from '../context/AuthContext';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -21,6 +23,10 @@ import {  useNavigate } from 'react-router-dom';
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wishes = () => {
+
+    const { user } = UserAuth();
+
+    const [isVisible, setIsVisible] = useState(false);
 
     const [wishes, setWishes] = useState([]);
     const [show, setShow] = useState(false)
@@ -54,6 +60,13 @@ export const Wishes = () => {
         await updateDoc(wishDoc, newData)
     }
    
+    useEffect(() => {
+        if (user) {
+            setIsVisible(true);
+        }
+        
+    }, []);
+
 
     return (
 
@@ -63,7 +76,7 @@ export const Wishes = () => {
                 <h1 className="headingOfBookW" >May all your wishes come true...</h1>
             </div>
             <div className="bodyWish">
-                <button onClick={() => setShow(true)} className="WaddBtn wish-button">+Add</button>
+                <button style={{ visibility: isVisible ? 'visible' : 'hidden' }} onClick={() => setShow(true)} className="WaddBtn wish-button">+Add</button>
                 <ModalMakeWish onClose={() => setShow(false)} show={show} addWishHandler={addWishHandler} />
 
                 {/* <section>
