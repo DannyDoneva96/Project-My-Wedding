@@ -144,6 +144,7 @@ This is static page for now describing grooms unique story !
 ![About US Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/aboutus.jpg)
 
 ### 404 Page Not Found
+If the url is not valid  Page 404 is rendered!
 
 ![404 Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/404.jpg)
 
