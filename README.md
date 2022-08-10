@@ -97,7 +97,7 @@ You can move the cards with click and mouse move.
 There is pagination as well.
 If there is no wishes -paragraph appears with text “No wishes yet ”
 
-![Book of Wishes Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/comments.jpg)
+![Book of Wishes Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/comment.png)
 
 The +ADD Button shows Modal with input fields:
 NAME : We expect name here
@@ -118,7 +118,7 @@ TODO: That must happen only if is owner
 Every Wish card has two emoticons in the right top corner which shows likes and dislikes
 with  click on the emoticon you can add like or dislike 
 
-![Book of Wishes Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/Untitled.png)
+
 
 ### RSVP Page
 Here we have form with input fields ,select options field and textarea.
@@ -132,7 +132,11 @@ user.name will be attending user.event
 For all the Data in our FireStore
 
 
-![ RSVP Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/guestPage.png)
+![ RSVP Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/Untitled.png)
+
+Here you can see More details about every guest respond. With click on more details button you will be redirect to url with specific id of the respondUser.
+
+![ RSVP Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/details.png)
 
 ###About US
 This is static page for now describing grooms unique story !
@@ -140,6 +144,7 @@ This is static page for now describing grooms unique story !
 ![About US Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/aboutus.jpg)
 
 ### 404 Page Not Found
+If the url is not valid  Page 404 is rendered!
 
 ![404 Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/404.jpg)
 
