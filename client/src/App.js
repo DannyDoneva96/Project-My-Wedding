@@ -1,9 +1,7 @@
-import { Route, Routes } from 'react-router-dom'
-import { useNavigate } from "react-router-dom";
+import { Route, Routes ,useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { db } from './firebase'
+import { db,auth } from './firebase'
 import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore'
-import { auth } from './firebase'
 import { AuthContextProvider } from './context/AuthContext';
 import { Header } from './components/Header'
 import { Home } from './components/Home'
@@ -18,16 +16,17 @@ import { Login } from './components/Login'
 import { CreateWish } from './components/CreateWish'
 import { Guest } from './components/Guest'
 import { Logout } from './components/Logout'
+import { DetailsOfGuest } from './components/DetailsOfGuest'
+
 
 function App() {
 
-
-
-
   const [guest, setGuest] = useState([]);
-  const rsvpRef = collection(db, "rsvp");
-  useEffect(() => {
 
+  const rsvpRef = collection(db, "rsvp");
+
+  useEffect(() => {
+       
     const getAll = async () => {
       const data = await getDocs(rsvpRef)
       setGuest(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -38,18 +37,12 @@ function App() {
   }, []);
 
 
-
-
-
   let navigate = useNavigate();
-  const routeChange = () => {
-    let path = `guest`;
-    navigate(path);
-  }
+  
 
   const addGuestHandler = async (rsvp) => {
     await addDoc(rsvpRef, rsvp)
-    routeChange()
+    navigate(`guest`)
   }
 
   
@@ -74,6 +67,7 @@ function App() {
           <Route path="/create" element={<CreateWish />} />
           <Route path="/register" element={<Register  />} />
           <Route path="/guest" element={<Guest guest={guest} />} />
+          <Route path="/guests/:id" element={<DetailsOfGuest guest={guest} />} />
 
           <Route path="/error" element={<ErrorPage />} />
         </Routes>

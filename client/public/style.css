@@ -741,6 +741,23 @@ margin-bottom: 100px;
   font-family: Lucida Handwriting
 }
 
+.details{
+margin-left: 30px;
+  background-color: rgb(136, 136, 136);
+outline: none;
+border: none;
+color: white;
+padding: 8px 22px;
+border-radius: 50px;
+font-size:15px;
+transition: all 0.3s ease;
+
+}
+
+.details:hover{
+  background-color:rgb(49, 49, 49);
+  cursor:pointer;
+}
 .gradient-list {
   margin-top: 50px !important;
 
@@ -750,8 +767,55 @@ margin-bottom: 100px;
   text-align: left;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 4px #000000;
+  margin-bottom:5px;
 
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    font-size: 30px;
 }
   
+/* Details Item Page */
+
+
+
+.detailsHeadingh1 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width : 80%;
+
+  margin-left: 150px;
+  margin-top:100px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: Lucida Handwriting
+}
+
+.detailsHeadingh2{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width : 80%;
+
+  font-size: 40px;
+  margin-left: 50px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: Lucida Handwriting
+}
+
+.detailsP{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-left: 50px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: Lucida Handwriting;
+width : 50%
+}
+
+.guestDetails{
+  margin-bottom: 50px;
+}
