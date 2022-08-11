@@ -27,12 +27,12 @@ export const Register = (props) => {
         e.preventDefault();
         try {
 
-            if (!registerUser.password === registerUser.confirmPassword) {
-                alert("Passwords dont match")
-                return;
+            if (registerUser.password === registerUser.confirmPassword) {
+                 await createUser(registerUser.email, registerUser.password);
+          navigate('/')
               }  
-          await createUser(registerUser.email, registerUser.password);
-          navigate('/home')
+                         setError("Passwords dont match")
+
         } catch (e) {
           setError(e.message.split('/')[1].split(')')[0]);
         }
