@@ -14,6 +14,8 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [show, setShow] = useState(false)
     const [likes, setLikes] = useState({ likes: wishes.likes })
+    const [dislikes, setDislikes] = useState({ dislikes: wishes.dislikes })
+
     const wishRef = collection(db, "wish");
     
     useEffect(() => {
@@ -27,10 +29,17 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
 
     const likesAction = async (id, likesData) => {
         const wishDoc = doc(db, "wishes", id);
-        const newData = { likes: likesData + 1 }
+        const newData = { likes: Number(likesData) + 1 }
         await updateDoc(wishDoc, newData)
         setLikes(newData)
     }
+    const dislikeAction = async (id, dislikeData) => {
+        const wishDoc = doc(db, "wishes", id);
+        const newData = { dislikes: Number(dislikeData) + 1 }
+        await updateDoc(wishDoc, newData)
+        setDislikes(newData)
+    }
+
     useEffect(() => {
 
         const getLikes = async () => {
@@ -55,7 +64,7 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
                         <div className="media-icons">
 
                             <i onClick={() => { likesAction(wishes.id, wishes.likes) }} className="fa-solid fa-heart">Likes : {wishes.likes}</i>
-                            <i className="fa-solid fa-heart-crack">Dislike: {wishes.dislikes}</i>
+                            <i onClick={() => { dislikeAction(wishes.id, wishes.dislikes) }}  className="fa-solid fa-heart-crack">Dislike: {wishes.dislikes}</i>
 
                         </div>
                         <div className="name-prof">

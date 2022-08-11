@@ -41,7 +41,7 @@ export const Wishes = () => {
         }
         getAll()
 
-    }, []);
+    }, [wishes]);
 
     const addWishHandler = async (wishData) => {
 
