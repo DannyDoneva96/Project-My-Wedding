@@ -8,6 +8,7 @@ import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase
 // const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wish = ({ wishes, updateWish, deleteWish }) => {
+
     const { user } = UserAuth();
 
     const [isVisible, setIsVisible] = useState(false);
@@ -16,9 +17,11 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
     const wishRef = collection(db, "wish");
     
     useEffect(() => {
+        if (user){
         if (user.email === wishes.owner) {
             setIsVisible(true);
         }
+    }
         
     }, []);
 

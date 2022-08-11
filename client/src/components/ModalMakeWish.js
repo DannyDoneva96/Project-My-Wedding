@@ -3,6 +3,10 @@ import {useState} from 'react'
 
 
 export const ModalMakeWish = (props) => {
+    let owner = ''
+    if(props.user){
+        owner = props.user.email
+    }else{owner=''}
 
     const [wishes,setWishes]=useState({
         name:'',
@@ -11,7 +15,7 @@ export const ModalMakeWish = (props) => {
         message: '',
         likes:0,
         dislikes:0,
-        owner: props.user.email
+        owner: owner
     });
 
     
