@@ -11,6 +11,7 @@ export const ModalMakeWish = (props) => {
         message: '',
         likes:0,
         dislikes:0,
+        owner: props.user.email
     });
 
     

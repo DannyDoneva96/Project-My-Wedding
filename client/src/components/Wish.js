@@ -16,9 +16,10 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
     const wishRef = collection(db, "wish");
     
     useEffect(() => {
-        if (user) {
+        if (user.email === wishes.owner) {
             setIsVisible(true);
         }
+        
     }, []);
 
     const likesAction = async (id, likesData) => {

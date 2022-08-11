@@ -39,7 +39,6 @@ export const Wishes = () => {
             const data = await getDocs(wishRef)
             setWishes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         }
-
         getAll()
 
     }, []);
@@ -77,7 +76,7 @@ export const Wishes = () => {
             </div>
             <div className="bodyWish">
                 <button style={{ visibility: isVisible ? 'visible' : 'hidden' }} onClick={() => setShow(true)} className="WaddBtn wish-button">+Add</button>
-                <ModalMakeWish onClose={() => setShow(false)} show={show} addWishHandler={addWishHandler} />
+                <ModalMakeWish onClose={() => setShow(false)} show={show} addWishHandler={addWishHandler} user={user} />
 
                 {/* <section>
                     <div className="swiper mySwiper containerWishes">
