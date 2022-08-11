@@ -122,7 +122,11 @@ TODO: That must happen only if is owner
 Every Wish card has two emoticons in the right top corner which shows likes and dislikes
 with  click on the emoticon you can add like or dislike 
 
+###Invitation Page
 
+Shows Invitation and direct you to leave your respond in RSVP page
+
+![ Invitation Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/invitation.png)
 
 ### RSVP Page
 Here we have form with input fields ,select options field and textarea.
