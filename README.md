@@ -59,7 +59,7 @@ Then start the client with
 
 This will navigate to http://localhost:3000/ in the browser.
 
-Or you can see live demo here : https://react-sofuni-weddingapp.web.app/
+Or you can see live demo here : https://react-sofuni-weddingapp.web.app/ (NOTE that css will break the app on mobile screen )
 
 ### Home Page (logged out user)
 
