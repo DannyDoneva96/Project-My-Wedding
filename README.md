@@ -40,6 +40,10 @@ The HTML and CSS is written by myself with basic knowledge and lots of documenta
 | Login                          | ❌   | ✅   |
 | Register                       | ❌   | ✅   |
 | Logout                         | ✅   | ❌   |
+| Send rsvp                      | ✅   | ❌   |
+| See add wish button            | ✅   | ❌   |
+| See guests page                | ✅   | ❌   |
+
 
 ##RSVP Wedding App
 
