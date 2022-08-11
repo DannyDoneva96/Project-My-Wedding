@@ -59,7 +59,7 @@ Then start the client with
 
 This will navigate to http://localhost:3000/ in the browser.
 
-Or you can see live demo here :………………………………………
+Or you can see live demo here : https://react-sofuni-weddingapp.web.app/
 
 ### Home Page (logged out user)
 
@@ -121,9 +121,12 @@ We cansle the operation with click on Close or anywhere out of the modal area.
 
 ![Book of Wishes Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/addComments.jpg)
 
+
 On this photo is clicked on Edit button 
 It opens another modal only over the card section and gives you the same inputs wich changed the commend .
-TODO: That must happen only if is owner 
+
+![Book of Wishes owner View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/owner.jpg)
+ That can  happen only if is owner 
 
 ![Book of Wishes Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/edit%20comment.jpg)
 
