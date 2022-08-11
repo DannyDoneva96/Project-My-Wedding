@@ -4,7 +4,7 @@
 Wedding-App-React-Project
 This app was created for my project defence @ SoftUni for my React course.
 The project was generated with React version 18.2.0.
-React web application for reading and creating wishes, TODO:also like and comment on them.
+React web application for reading and creating wishes, also like and dislike them.
 
 ## Built with:
 
