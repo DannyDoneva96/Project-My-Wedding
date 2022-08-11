@@ -65,7 +65,7 @@ Or you can see live demo here :………………………………………
 
 Invites the user to log in to their account or to register. 
 
-![Home Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/logout.jpg)
+![Home Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/guestmenu.jpg)
 
 ### Home Page (logged in user)
 
@@ -130,11 +130,16 @@ TODO: That must happen only if is owner
 Every Wish card has two emoticons in the right top corner which shows likes and dislikes
 with  click on the emoticon you can add like or dislike 
 
+This is how it looks for GUEST - buttons are not visible 
+![ Invitation Page WB View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/guestwb.jpg)
+
 ###Invitation Page
 
 Shows Invitation and direct you to leave your respond in RSVP page
 
 ![ Invitation Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/invitation.png)
+
+
 
 ### RSVP Page
 Here we have form with input fields ,select options field and textarea.
@@ -154,7 +159,10 @@ Here you can see More details about every guest respond. With click on more deta
 
 ![ RSVP Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/details.png)
 
-###About US
+This is how it looks for GUEST - buttons are not visible 
+![ Invitation Page guest View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/guestrsvp.jpg)
+
+### About US
 This is static page for now describing grooms unique story !
 
 ![About US Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/aboutus.jpg)
