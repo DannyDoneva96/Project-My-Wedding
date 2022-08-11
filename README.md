@@ -82,6 +82,9 @@ After successful registration redirects to the Home page, with an already logged
 
 ![Registration Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/reg.jpg)
 
+Validations:
+![Login Page Validations](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/regvalidations.jpg)
+
 ### Login Page (logged out user)
 
 Logging an already registered user with the correct email and password.
@@ -90,6 +93,9 @@ if there is error like: unknown user or weak password and more .. message is sho
 After successful login redirects to the Home page, with an already logged-in user.
 
 ![Login Page View](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/%D0%BB%D0%BE%D0%B3%D0%B8%D0%BD%D0%BF%D0%B0%D0%B3%D0%B5.jpg)
+
+Validations:
+![Login Page Validations](https://github.com/DannyDoneva96/Project-My-Wedding/blob/main/photos/loginvalidations.jpg)
 
 ### Logout Page (logged in user)
 
