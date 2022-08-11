@@ -13,7 +13,7 @@ export const Register = (props) => {
         password: '',
         confirmPassword: '',
     });
-    const [error, setError] = useState('')
+    const [error, setError] = useState(undefined)
   const { createUser } = UserAuth();
   const navigate = useNavigate()
   
@@ -25,7 +25,6 @@ export const Register = (props) => {
     }
     const onSubmit = async (e) =>{
         e.preventDefault();
-        setError('');
         try {
 
             if (!registerUser.password === registerUser.confirmPassword) {
@@ -35,8 +34,7 @@ export const Register = (props) => {
           await createUser(registerUser.email, registerUser.password);
           navigate('/home')
         } catch (e) {
-          setError(e.message);
-          console.log(error);
+          setError(e.message.split('/')[1].split(')')[0]);
         }
     }
     
@@ -69,6 +67,11 @@ export const Register = (props) => {
                 <div className="input-group">
                     <button  type="submit" onClick={onSubmit}>
                         <i className="fa-solid fa-right-to-bracket"></i>                </button>
+                </div>
+                <div>
+                    {error
+                    ?<h3 className="errorMsg">{error}</h3>
+                    : null  }
                 </div>
                 <div className="switch-login">
                     <Link to="/login">Already have an account? <br/>

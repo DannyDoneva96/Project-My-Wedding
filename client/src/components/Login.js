@@ -24,8 +24,7 @@ export const Login = () => {
             await signIn(email, password)
             navigate('/')
         } catch (e) {
-            setError(e.message)
-            navigate('/error');
+            setError(e.message.split('/')[1].split(')')[0]);  
         }
 
 
@@ -52,6 +51,10 @@ export const Login = () => {
                         <i className="fa-solid fa-right-to-bracket"></i> </button>
 
                 </div>
+                {error
+                    ?<h3 className="errorMsg">{error}</h3>
+                    : null  }
+
                 <div className="switch-login">
                     <Link to="/login">Forgot your password? <br />
                         <span>Click here</span></Link>

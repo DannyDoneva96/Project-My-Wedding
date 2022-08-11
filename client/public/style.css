@@ -344,6 +344,11 @@ border: none;
   border-bottom: 2px solid #d0ff61;
 }
 
+.errorMsg{
+  font-size:20px;
+  color: #ff0000;
+}
+
 @media  screen and (max-width:700px) {
  
   .form-heading{
@@ -848,3 +853,4 @@ width : 50%
   font-size:30px;
   margin: 10px;
 }
+
