@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import { db } from '../firebase'
-import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore'
 import { UserAuth } from '../context/AuthContext';
 
 

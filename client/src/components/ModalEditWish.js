@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 
-export const ModalEditWish = ({id,updateWish,show,onClose}) => {
+export const ModalEditWish = ({id,updateWish,show,onClose,wish}) => {
 
     
 
@@ -34,7 +34,7 @@ if (!show){
                 </div>
                 <div className="">
                         <i className="fas fa-user"></i>
-                        <input type="text" placeholder="Name" name="name"  onChange={onChange} value={editWishes.name}></input>
+                        <input type="text" placeholder="Name" name="name"  onChange={onChange} value={editWishes.name}>{wish.name}</input>
                         <span className="bar"></span>
 
                     </div>

@@ -7,13 +7,12 @@ import {getAuth} from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDt2r0AxCi1IgFNZFTXSnUz6SVbT7wVeUI",
-  authDomain: "react-sofuni-weddingapp.firebaseapp.com",
-  databaseURL: "https://react-sofuni-weddingapp-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "react-sofuni-weddingapp",
-  storageBucket: "react-sofuni-weddingapp.appspot.com",
-  messagingSenderId: "52040529616",
-  appId: "1:52040529616:web:9017d047ea164c268a90d5"
+  apiKey: "AIzaSyCRZsKUbk_vn-vwT2bFEaUUhNL5x6WaFWw",
+  authDomain: "weddingapp-23687.firebaseapp.com",
+  projectId: "weddingapp-23687",
+  storageBucket: "weddingapp-23687.appspot.com",
+  messagingSenderId: "826209655375",
+  appId: "1:826209655375:web:3a8d584a381cded521e83a"
 };
 
 // Initialize Firebase

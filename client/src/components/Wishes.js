@@ -40,8 +40,7 @@ export const Wishes = () => {
             setWishes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         }
         getAll()
-
-    }, [wishes]);
+    }, []);
 
     const addWishHandler = async (wishData) => {
 

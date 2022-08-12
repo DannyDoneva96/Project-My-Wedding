@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase'
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext';
 
@@ -56,7 +54,7 @@ export const Login = () => {
                     : null  }
 
                 <div className="switch-login">
-                    <Link to="/login">Forgot your password? <br />
+                    <Link to="/register">Dont have an account? <br />
                         <span>Click here</span></Link>
                 </div>
 

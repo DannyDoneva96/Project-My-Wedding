@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { doc, getDoc } from "firebase/firestore";
-import { db, auth } from '../firebase'
+import { db } from '../firebase'
 import {useEffect,useState} from 'react'
 
 export const DetailsOfGuest = () => {

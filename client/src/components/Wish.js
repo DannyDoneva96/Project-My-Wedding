@@ -76,7 +76,7 @@ export const Wish = ({ wishes, updateWish, deleteWish }) => {
                         <div className="btnW">
                             <button style={{ visibility: isVisible ? 'visible' : 'hidden' }} onClick={() => setShow(true)} className="btnWishEdit">Edit</button>
                             <button style={{ visibility: isVisible ? 'visible' : 'hidden' }} onClick={() => { deleteWish(wishes.id) }} className="btnWishDel">Delete</button>
-                            <ModalEditWish onClose={() => setShow(false)} show={show} id={wishes.id} updateWish={updateWish} />
+                            <ModalEditWish onClose={() => setShow(false)} show={show} id={wishes.id} wish={wishes} updateWish={updateWish} />
 
                         </div>
                     </div>

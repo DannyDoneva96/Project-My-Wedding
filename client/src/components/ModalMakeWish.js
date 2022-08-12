@@ -3,6 +3,7 @@ import {useState} from 'react'
 
 
 export const ModalMakeWish = (props) => {
+    
     let owner = ''
     if(props.user){
         owner = props.user.email
