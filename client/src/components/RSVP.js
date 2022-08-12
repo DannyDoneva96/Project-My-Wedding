@@ -13,9 +13,11 @@ export const RSVP = (props) => {
         name: '',
         email: '',
         numOfGuest: '',
-        event: '',
+        event: "All Events",
         message: '',
     });
+
+    
 
     const onChange = (e) => {
         setRsvp(state => ({

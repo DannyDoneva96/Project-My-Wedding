@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+
 
 
 export const ModalEditWish = ({id,updateWish,show,onClose,wish}) => {
@@ -11,6 +12,20 @@ export const ModalEditWish = ({id,updateWish,show,onClose,wish}) => {
         related: '',
         message: '',
     });
+
+
+    useEffect( () => {
+       
+           
+        setEditWishes({
+            name:wish.name,
+            imageUrl: wish.imageUrl,
+            related: wish.related,
+            message: wish.message,
+        });
+           
+          
+    }, []);
 
 if (!show){
         return null;
@@ -34,7 +49,7 @@ if (!show){
                 </div>
                 <div className="">
                         <i className="fas fa-user"></i>
-                        <input type="text" placeholder="Name" name="name"  onChange={onChange} value={editWishes.name}>{wish.name}</input>
+                        <input type="text" placeholder="Name" name="name"  onChange={onChange} value={editWishes.name}></input>
                         <span className="bar"></span>
 
                     </div>

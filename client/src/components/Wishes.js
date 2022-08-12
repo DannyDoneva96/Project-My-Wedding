@@ -41,10 +41,10 @@ export const Wishes = () => {
         }
         getAll()
     }, []);
-
     const addWishHandler = async (wishData) => {
-
+        wishData.owner = user.email;
         await addDoc(wishRef, wishData)
+        
         
     }
       const deleteWish = async(id) =>{
