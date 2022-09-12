@@ -492,6 +492,7 @@ position: relative;
   font-size: 40px;
 }
 .WBcg{
+  display: inline-block;
   background-image: url("./images/lilavo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
