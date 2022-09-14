@@ -18,9 +18,14 @@ import {  useNavigate } from 'react-router-dom';
 
 // Import Swiper styles
 
+const array=[{"Name":"Danny", "imageUrl":"https://www.wed2b.com/media/images/category/bridesmaids/bridesmaid-dresses-m.jpg","message":"I wish you happiness!","related":"Sister"} ,
+{"Name":"Lizzy", "imageUrl":"https://th.bing.com/th/id/OIP.3_wTp4nffXIcHAAuLWa4HwHaLH?pid=ImgDet&rs=1","message":"I wish you all the best!","related":"Sister"} ,
+{"Name":"Barbara", "imageUrl":"https://i.pinimg.com/originals/c4/9a/39/c49a39e7e609505f38fe91a1723dd0c6.jpg","message":"I wish you lots of kids!","related":"Sister"} ,
+{"Name":"Damon", "imageUrl":"https://i.pinimg.com/originals/1e/b6/a0/1eb6a0bf91551a79ad1b8ae7602d5617.jpg","message":"I wish you happiness!","related":"Brother"} 
+]
 
 
-// const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
+ const photo1 = new URL("../../public/images/bbbb.jpg", import.meta.url);
 
 export const Wishes = () => {
 
@@ -77,33 +82,7 @@ export const Wishes = () => {
                 <button style={{ visibility: isVisible ? 'visible' : 'hidden' }} onClick={() => setShow(true)} className="WaddBtn wish-button">+Add</button>
                 <ModalMakeWish onClose={() => setShow(false)} show={show} addWishHandler={addWishHandler} user={user} />
 
-                {/* <section>
-                    <div className="swiper mySwiper containerWishes">
-                        <div className="swiper-wrapper contentWishes">
-                            <div className="swiper-slide card">
-                                <div className="card-content">
-                                    <div className="imageW">
-                                        <img src={photo1} alt="photo1" />
-                                    </div>
-                                    <div className="media-icons">
-                                        <i className="fab fa-facebook"></i>
-                                        <i className="fab fa-twitter"></i>
-                                        <i className="fab fa-github"></i>
-                                    </div>
-                                    <div className="name-prof">
-                                        <span className="nameW">Elizabeth Miler</span>
-                                        <span className="prof">Sister </span>
-                                        <p className="something">I wish you both endless love</p>
-                                    </div>
-                                    <div className="btnW">
-                                        <button className="btnWishEdit">Edit</button>
-                                        <button className="btnWishDel">Delete</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
+               
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={30}
@@ -119,8 +98,11 @@ export const Wishes = () => {
                     >
 
                     {wishes.length > 0 && !undefined
-                        ? wishes.map(x => <SwiperSlide> <Wish key={x.name} wishes={x} deleteWish={deleteWish} updateWish={updateWish} /> </SwiperSlide>)
-                        : <p className="nowishes" >No Wishes yet...</p>
+                        ? wishes.map(x => <SwiperSlide>
+                             <Wish key={x.name} wishes={x} deleteWish={deleteWish} updateWish={updateWish} /> </SwiperSlide>)
+                        // : <p className="nowishes" >No Wishes yet...</p>
+                        :  array.map(x => <SwiperSlide>  <Wish key={x.name} wishes={x} deleteWish={deleteWish} updateWish={updateWish} /> </SwiperSlide>)
+
                     }
                 </Swiper>
                 {/* <section>
